@@ -1,4 +1,4 @@
-package com.firstapp.calculatorapp
+package com.firstapp.adsintegrated
 
 import org.junit.Test
 

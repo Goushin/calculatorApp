@@ -320,5 +320,18 @@
         app:layout_constraintStart_toEndOf="@+id/button_dot"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
+    <com.huawei.hms.ads.banner.BannerView
+        android:id="@+id/hw_banner_view"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/output"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:adId="testw6vs28auh3"
+        app:bannerSize="BANNER_SIZE_360_57" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,16 +1,36 @@
-package com.firstapp.calculatorapp
+package com.firstapp.adsintegrated
 
+import android.app.Application
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.ContextCompat
+import com.huawei.hms.ads.AdParam
+import com.huawei.hms.ads.BannerAdSize
 import kotlinx.android.synthetic.main.activity_main.*
 import org.mariuszgromada.math.mxparser.Expression
 import java.text.DecimalFormat
+import com.huawei.hms.ads.HwAds
+import com.huawei.hms.ads.banner.BannerView
 
+class AdSampleApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        // Initialize the HUAWEI Ads SDK.
+        HwAds.init(this)
+        }
+    }
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        var bannerView: BannerView? = findViewById(R.id.hw_banner_view)
+
+        bannerView!!.adId = "testw6vs28auh3"
+        bannerView!!.bannerAdSize = BannerAdSize.BANNER_SIZE_360_57
+        bannerView!!.setBannerRefresh(60)
+        val adParam = AdParam.Builder().build()
+        bannerView!!.loadAd(adParam)
 
         button_clear.setOnClickListener {
             input.text = ""

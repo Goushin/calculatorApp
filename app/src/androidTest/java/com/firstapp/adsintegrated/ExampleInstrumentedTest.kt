@@ -1,4 +1,4 @@
-package com.firstapp.calculatorapp
+package com.firstapp.adsintegrated
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
